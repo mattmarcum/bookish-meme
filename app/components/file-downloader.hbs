@@ -1,0 +1,29 @@
+<div class="file-downloader" ...attributes>
+  <div class="file-downloader__header">
+      <label class="file-downloader__header-select-all">
+        <input data-test-fd-allSelected type="checkbox" indeterminate={{this.someSelected}} checked={{this.allSelected}} {{on "click" this.toggleSelectAll}}/>
+        <span data-test-fd-selected-text>{{#if this.selected.length}}Selected {{this.selected.length}}{{else}}None Selected{{/if}}</span>
+      </label>
+      <button data-test-fd-download type="button" disabled={{not this.selected.length}} {{on "click" this.downloadSelected}}>{{fa-icon "download"}} Download Selected</button>
+  </div>
+  <div class="file-downloader__body">
+    {{yield this.selected this.toggleSelection}}
+  </div>
+
+  {{#if this.showDownloadModal}}
+  <div class="file-downloader__modal-bg"/>
+
+  <div class="file-downloader__modal-container">
+      <div data-test-fd-modal class="file-downloader__modal">
+          Downloading the following files:
+          <ul>
+          {{#each this.selected as |selected|}}
+              <li>{{selected.device}}\\{{selected.path}}</li>
+          {{/each}}
+          </ul>
+          <button {{autofocus}} type="button" {{on "click" this.closeDownloadModal}}>Close</button>
+      </div>
+  </div>
+  {{/if}}
+
+</div>

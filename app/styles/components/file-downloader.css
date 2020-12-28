@@ -1,0 +1,63 @@
+.file-downloader {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.file-downloader__header {
+  display:flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.file-downloader__header-select-all {
+  margin-right: 20px;
+}
+
+.file-downloader__header-select-all input {
+  margin: 0px 15px 0px 5px;
+}
+
+.file-downloader__header button {
+  margin-left: 10px;
+  background-color: var(--white);
+  border: none;
+}
+
+.file-downloader__modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  opacity: 30%;
+  z-index: 10;
+}
+
+.file-downloader__modal-container {
+  position:relative;
+}
+
+.file-downloader__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  margin: 10vh auto;
+  z-index: 11;
+  padding: 2rem;
+}
+
+.file-downloader__modal li {
+  margin-bottom: 5px;
+}
+
+.file-downloader__modal button {
+  float: right;
+  padding: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--border)
+}
