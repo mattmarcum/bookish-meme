@@ -1,13 +1,14 @@
 .file-downloader {
-  margin: 10px;
+  margin: 20px;
   box-sizing: border-box;
+  box-shadow: 2px 2px 2px 2px var(--border);
 }
 
 .file-downloader__header {
   display:flex;
   align-items: baseline;
   justify-content: flex-start;
-  padding-bottom: 10px;
+  padding: 10px 0px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -16,7 +17,7 @@
 }
 
 .file-downloader__header-select-all input {
-  margin: 0px 15px 0px 5px;
+  margin: 0px 15px 0px 10px;
 }
 
 .file-downloader__header button {

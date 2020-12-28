@@ -15,7 +15,7 @@
         <StRows class="small-text" as |StCell columns rowData|>
             {{#each columns as |column|}}
                 {{#if (eq column 'status')}}
-                    <StCell class="no-padding">{{#if (eq rowData.status 'available')}}{{fa-icon "circle" class="green-status"}}{{/if}}</StCell>
+                    <StCell class="no-padding">{{#if (eq rowData.status 'available')}}{{fa-icon "circle" class="light-green"}}{{/if}}</StCell>
                     <StCell>{{capitalize rowData.status}}</StCell>
                 {{else}}
                     <StCell>{{get rowData column}}</StCell>
