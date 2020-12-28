@@ -1,0 +1,5 @@
+<table class="select-table" ...attributes>
+{{yield
+    (component 'select-table/header' columns=@columns)
+    (component 'select-table/rows' data=@data columns=@columns statusField=@statusField statusAvailable=@statusAvailable selected=@selected toggleSelection=@toggleSelection)}}
+</table>

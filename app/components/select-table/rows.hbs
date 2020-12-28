@@ -1,0 +1,22 @@
+<tbody>
+    {{#each @data as |rowData|}}
+        {{#let (includes rowData @selected) as |rowSelected|}}
+        <tr class="select-table__row {{if rowSelected "select-table__row__selected"}}"
+            {{!-- template-lint-disable no-invalid-interactive  --}}
+            {{on "click" (fn @toggleSelection rowData)}} ...attributes>
+            <td class="select-table__row-cell select-table__row-cell-select">
+                    <input type="checkbox"
+                    aria-label="Select"
+                    disabled={{not-eq (get rowData @statusField) @statusAvailable}}
+                    checked={{rowSelected}}
+                    {{on "click" (stop-propagation (fn @toggleSelection rowData))}}/>
+            </td>
+            {{yield
+                (component 'select-table/rows/cell')
+                @columns
+                rowData
+            }}
+        </tr>
+        {{/let}}
+    {{/each}}
+</tbody>

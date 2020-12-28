@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "components/file-downloader.css";
+@import "components/select-table.css";
 
 :root {
   --black: #000000;
@@ -13,4 +14,16 @@
 html, body, * {
   font-family: sans-serif;
   font-weight: normal;
+}
+
+.light-green {
+  color: var(--light-green);
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
+
+.no-padding {
+  padding: 0;
 }

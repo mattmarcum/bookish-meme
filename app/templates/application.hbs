@@ -1,2 +1,26 @@
 <FileDownloader @files={{@model}} as |selected toggleSelection|>
+    <SelectTable
+        @data={{@model}}
+        @columns={{keys @model.firstObject}}
+        @selected={{selected}}
+        @statusField="status"
+        @statusAvailable="available"
+        @toggleSelection={{toggleSelection}} as |StHeader StRows|>
+        <StHeader as |StColumn columns|>
+            {{#each columns as |column|}}
+                {{#if (eq column 'status')}}<StColumn class="no-padding"/>{{/if}}
+                <StColumn>{{capitalize column}}</StColumn>
+            {{/each}}
+        </StHeader>
+        <StRows class="small-text" as |StCell columns rowData|>
+            {{#each columns as |column|}}
+                {{#if (eq column 'status')}}
+                    <StCell class="no-padding">{{#if (eq rowData.status 'available')}}{{fa-icon "circle" class="green-status"}}{{/if}}</StCell>
+                    <StCell>{{capitalize rowData.status}}</StCell>
+                {{else}}
+                    <StCell>{{get rowData column}}</StCell>
+                {{/if}}
+            {{/each}}
+        </StRows>
+    </SelectTable>
 </FileDownloader>

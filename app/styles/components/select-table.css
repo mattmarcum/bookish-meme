@@ -1,0 +1,34 @@
+
+.select-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.select-table__header {
+  border-bottom: 1px solid var(--border);
+}
+
+.select-table__header-col {
+  text-align: left;
+}
+
+.select-table__row {
+  transition: background-color 0.25s;
+  border-bottom: 1px solid var(--border);
+}
+
+.select-table__row:hover {
+  background-color: var(--lighter-gray);
+}
+
+.select-table__row__selected {
+  background-color: var(--light-gray);
+}
+
+.select-table__header-col, .select-table__row-cell {
+  padding: 10px 5px 10px 0px;
+}
+
+.select-table__row-cell-select input {
+  margin-left: 5px;
+}
