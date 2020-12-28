@@ -1,0 +1,15 @@
+@import "normalize.css";
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --border: #d0d0d0;
+  --light-gray: #dedede;
+  --lighter-gray: #ededed;
+  --light-green: #4aee4a;
+}
+
+html, body, * {
+  font-family: sans-serif;
+  font-weight: normal;
+}

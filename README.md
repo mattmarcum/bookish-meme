@@ -1,7 +1,6 @@
 # file-downloader
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An implementaion of a file-downloader component with a select-table component thrown in for good measure.
 
 ## Prerequisites
 
